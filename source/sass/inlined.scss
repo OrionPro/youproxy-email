@@ -1,0 +1,124 @@
+/**
+ * Inlined (inlined.scss)
+ *
+ * - This CSS code will be inlined.
+ * - Media queries will be grouped in the <head> of your email template.
+ */
+
+/* ----- Charset ----- */
+@charset 'UTF-8';
+
+/* ----- Variables ----- */
+@import 'variables';
+
+/* ----- Tools ----- */
+@import 'tools/grid';
+
+/* ----- Generic ----- */
+@import 'generic/reset';
+@import 'generic/typography';
+
+/* ----- Objects ----- */
+@import 'objects/grid';
+
+/* ----- Utilities ----- */
+@import 'utilities/alignment';
+@import 'utilities/images';
+
+/* ----- Components ----- */
+@import 'components/preheader';
+@import 'components/buttons';
+@import 'components/hero';
+
+.header-img {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+.text-center {
+  text-align: center;
+}
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: $main-txt-color;
+  &.mt-35 {
+    margin-top: 35px;
+  }
+  &.mt-30 {
+    margin-top: 30px;
+  }
+}
+.divider {
+  width: 211px;
+  height: 2px;
+  margin: 20px auto 25px;
+  background: #ff5242;
+  background-image: radial-gradient(circle 106px at center, #ff5242 0%, #ff841c 100%);
+}
+p {
+  font-size: 18px;
+  &.main-color {
+    color: $main-color;
+  }
+  &.bold {
+    font-weight: bold;
+  }
+  &.minus-mt {
+    margin-top: 0;
+  }
+}
+.link {
+  text-align: center;
+  a {
+    width: 290px;
+    height: 47px;
+    background-image: url("../assets/link-bg.png");
+    border-radius: 20px;
+    margin: auto ;
+    line-height: 47px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+.link-social {
+  width: 430px;
+  margin: auto;
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%!important;
+  }
+}
+.link-social__item {
+  display: inline-block;
+  vertical-align: middle;
+  @media (max-width: $breakpoint-mobile) {
+    display: block!important;
+    text-align: center!important;
+  }
+  i {
+    width: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    img {
+      vertical-align: middle;
+    }
+  }
+  &.big-width {
+    width: 240px;
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%!important;
+    }
+  }
+  a {
+    display: inline-block;
+    color: $main-txt-color;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+.our-advantages__item {
+  width: 33.33%;
+  text-align: center;
+}
