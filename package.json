@@ -17,5 +17,8 @@
     "gulp-util": "^3.0.8",
     "@akzhan/gulp-juice": "^0.1.6",
     "web-resource-inliner": "^4.1.0"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3"
   }
 }
