@@ -1,0 +1,225 @@
+<!--
+  1. For best results we use XHTML Transitional.
+     More info:
+     - http://www.campaignmonitor.com/blog/post/3317/correct-doctype-to-use-in-html-email/
+     - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_sheep_of_html_email_design
+     - https://litmus.com/community/discussions/39-explanation-of-doctype-html-attributes-meta-tags-in-email
+  2. DPI images scaling issue in Outlook - Fix.
+     More info: https://blog.jmwhite.co.uk/2014/03/28/solving-dpi-scaling-issues-with-html-email-in-outlook/
+  3. We have included meta ‘Content Type’ so that we can set the character set as
+     UTF8 – specifying as much as possible can be a good thing when writing code
+     for the whole range of email clients.
+     More info: https://www.emailonacid.com/blog/article/email-development/the_importance_of_content-type_character_encoding_in_html_emails/
+  4. The IE=Edge meta tag enables CSS3 and media queries in Windows Phone 7.5 and
+     higher. That's why you should use it in your email.
+     More info: https://www.campaignmonitor.com/forums/topic/7989/windows-phone-8-has-full-css3media-query-support/
+  5. Meta ‘Viewport’ as seen above sets the viewable area to the width of the
+     device screen – this is essential if you want your email to be responsive.
+     If your email is intended solely for desktop users then don’t include this
+     line of code.
+  6. The final bit of meta data to set is the title tag - this is worth including
+     because it is used by Outlook when people use the ‘View in Browser’ function
+     and it can also appear in email preview snippets in some versions of Hotmail.
+  7. Outlook line heights fix.
+  8. Outlook system fonts stack fallback.
+  9. DPI images scaling issue in Outlook - Fix.
+     More info: https://blog.jmwhite.co.uk/2014/03/28/solving-dpi-scaling-issues-with-html-email-in-outlook/
+ 10. Embedded CSS - Bojler will not inline CSS from /embedded.css (It will be embedded to <head>).
+ 11. Inlined CSS - Bojler will inline CSS from /inlined.css.
+ 12. Adding spacing around main table. If you don't need this spacing just
+     remove class from markup.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- 1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
+	  xmlns:v="urn:schemas-microsoft-com:vml"><!-- 2 -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><!-- 3 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- 4 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/><!-- 5 -->
+	<title>Email title</title><!-- 6 -->
+
+	<!-- 7 -->
+	<!--[if gte mso 15]>
+	<style type="text/css">
+		table {
+			font-size: 1px;
+			line-height: 0;
+			mso-margin-top-alt: 1px;
+			mso-line-height-rule: exactly;
+		}
+
+		* {
+			mso-line-height-rule: exactly;
+		}
+	</style>
+	<![endif]-->
+
+	<!-- 8 -->
+	<!--[if mso]>
+	<style type="text/css">
+		body,
+		table,
+		td {
+			font-family: Arial, Helvetica, sans-serif !important;
+		}
+	</style>
+	<![endif]-->
+
+	<!-- 9 -->
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/embedded.css" data-inline data-embed/><!-- 10 -->
+	<link rel="stylesheet" href="css/inlined.css" data-inline/><!-- 11 -->
+</head>
+<body>
+<table id="preheader" width="0" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td></td>
+	</tr>
+</table><!-- /#preheader -->
+<table id="body-table" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="body-table-spacing" align="center" valign="top"><!-- 12 -->
+			<table class="container" width="600" align="center" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="column-12 first last header-img">
+						<a target="_blank" href="https://youproxy.ru/?utm_source=sendpulse&utm_medium=email&utm_campaign=extradition">
+							<img src="assets/youproxy-header-bg.gif" alt="">
+						</a>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12 first last text-center">
+						<p style="margin-top: 35px;font-size: 18px" class="title main-color">Ваши прокси:</p>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12 first last text-center">
+						<p style="margin-top: 10px" class=""> IP 1</p>
+						<p style="margin-bottom: 0">порт http/https 65233</p>
+						<p style="margin-top: 0">порт socks5 65234</p>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12 first last">
+						<p class="text-center">Перед началом работы с нашими IP адресами рекомендуем очистить кэш и куки браузеров.
+						</p>
+						<div class="divider">
+						</div>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12 first last text-center">
+						<p style="margin-top: 0" class="bold">Будем благодарны за отзывы:</p>
+						<div class="Links-to-forums-proxy">
+							<div class="Links-to-forums-proxy__item">
+								<a target="_blank" href="http://zismo.biz/topic/873250-youproxyru-individualnye-elitnye-proksi-ipv4-ot-25rsht/">Zismo</a>
+								<a target="_blank" href="https://forum.brobot.ru/index.php?/topic/1908-youproxyru-%D0%B8%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D0%BA%D1%81%D0%B8-ipv4-httpsocks-%D0%BE%D1%82-60%D1%80%D0%BC%D0%B5%D1%81/">BroBot</a>
+								<a target="_blank" href="https://bhf.io/threads/489864/">BHF</a>
+							</div>
+							<div class="Links-to-forums-proxy__item">
+								<a target="_blank" href="https://miped.ru/f/threads/individualnye-proksi-ipv4-http-socks-ot-60r-mes.62642/">Miped</a>
+								<a target="_blank" href="http://webmasters.ru/forum/f114/youproxy-ru-individual%60nye-elitnye-proksi-ipv-ot-r-sht-79901/#post782191">Webmasters</a>
+								<a target="_blank" href="https://forum.antichat.ru/threads/455162/">Antichat</a>
+							</div>
+							<div class="Links-to-forums-proxy__item">
+								<a target="_blank" href="https://lolzteam.net/threads/502526/">LolZteam </a>
+								<a target="_blank" href="https://zennolab.com/discussion/threads/youproxy-ru-individualnye-ehlitnye-proksi-ipv4-ot-65r-mes.42892/">Zennolab </a>
+								<a target="_blank" href="https://rselling.com/threads/20090/">Rselling </a>
+							</div>
+						</div>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12">
+						<div class="link-social">
+							<p class="link-social__item big-width">
+								<i>
+									<img src="assets/fa-envelope.png" alt="">
+								</i>
+								<a target="_blank" href="mailto:support@youproxy.ru" rel="nofollow">
+									support@youproxy.ru
+								</a>
+							</p>
+							<p class="link-social__item">
+								<i>
+									<img src="assets/fa-skype.png" alt="">
+								</i>
+								<a target="_blank" href="skype:YouProxy?add" rel="nofollow">
+									YouProxy
+								</a>
+							</p>
+							<p class="link-social__item big-width">
+								<i>
+									<img src="assets/isq.png" alt="">
+								</i>
+								<span>
+									726-290-621
+								</span>
+							</p>
+							<p class="link-social__item">
+								<i>
+									<img src="assets/fa-vk.png" alt="">
+								</i>
+								<a target="_blank" href="https://vk.com/youproxy" rel="nofollow">
+									vk.com/youproxy
+								</a>
+							</p>
+						</div>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12 first last our-advantages">
+						<div class="our-advantages__items">
+							<div class="our-advantages__item">
+								<img src="assets/icon1.png" alt="">
+								<p>Тех. поддержка
+									24/7</p>
+							</div>
+							<div class="our-advantages__item">
+								<img src="assets/icon2.png" alt="">
+								<p>Анонимность</p>
+							</div>
+							<div class="our-advantages__item last">
+								<img src="assets/icon3.png" alt="">
+								<p>Неограниченная
+									скорость</p>
+							</div>
+						</div>
+					</td><!-- /.column -->
+				</tr>
+				<tr>
+					<td class="column-12 first last footer">
+						<div class="footer__brands">
+							<img src="assets/webmoneylogo.png" alt="">
+							<img src="assets/ya-money-logo.png" alt="">
+							<img src="assets/qiwi_logo.png" alt="">
+							<img class="last" src="assets/Credit-Card-Visa-And-Master-Card.png" alt="">
+						</div>
+						<div class="footer__nav">
+							<a href="https://youproxy.ru/usloviya?utm_source=sendpulse&utm_medium=email&utm_campaign=transactional_letters">Условия</a>
+							<span> | </span>
+							<a href="https://youproxy.ru/faq/?utm_source=sendpulse&utm_medium=email&utm_term=new_version">FAQ</a>
+							<span> | </span>
+							<a href="https://youproxy.ru/contact-us?utm_source=sendpulse&utm_medium=email&utm_campaign=transactional_letters">Контакты</a>
+						</div>
+						<p class="bottom-text">Вы получили это письмо, так как являетесь клиентом YouProxy. <br>
+							Добавьте наш адрес support@youproxy.ru в Вашу адресную книгу,
+							чтобы наши письма не попадали в спам.
+						</p>
+					</td><!-- /.column -->
+				</tr>
+			</table><!-- /.container -->
+		</td><!-- /.body-table-spacing -->
+	</tr>
+</table><!-- /#body-table -->
+</body>
+</html>
