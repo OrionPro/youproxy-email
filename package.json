@@ -21,8 +21,10 @@
   "dependencies": {
     "cryptiles": "^4.1.2",
     "deep-extend": "^0.6.0",
+    "extend": "^3.0.2",
     "fresh": "^0.5.2",
     "hoek": "^5.0.3",
+    "lodash": "^4.17.11",
     "mime": "^2.3.1",
     "node-mime": "^1.0.0"
   }
